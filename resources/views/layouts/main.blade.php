@@ -20,7 +20,8 @@
           <li><a href="/">Home</a></li>
           <li><a href="/recipes">Recettes</a></li>
           <li><a href="/contact">Contact</a></li>
-          <li><a href="/admin/recipe">Admin</a></li>
+          <!-- <li><a href="/admin/recipe">Admin</a></li> -->
+          <li><a href="/dashboard">Administration</a></li>
         </ul>
       </div>
     </div>
