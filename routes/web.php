@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
+
 /*Route::get('/', function () {
     return view('welcome');
 });*/
@@ -34,4 +40,4 @@ Route::get('/contact', [ContactController::class, 'createForm']);
 Route::post('/contact', [ContactController::class, 'ContactForm'])->name('contact.store');
 
 use App\Http\Controllers\Admin\AdminController;
-Route::resource('admin/recipe', AdminController::class);
+Route::resource('admin/recipe', AdminController::class)->middleware('auth');
